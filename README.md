@@ -231,11 +231,12 @@ MediCare implements several security measures:
 - `.env` files are excluded from Git version control.
 - Backend validation is used for submitted form data.
 
-## Deployment
 
-### Backend — Render
-
-The Node.js and Express backend is deployed on Render and connected to MongoDB Atlas.
+### Deployment
+- Frontend: Vercel
+- Backend: Render
+- Database: MongoDB Atlas
+- Version Control: Git & GitHub
 
 **Live Backend API:**
 
@@ -252,11 +253,17 @@ The backend handles:
 
 **Note:** The free Render service may take some time to respond after periods of inactivity.
 
+
 ### Frontend — Vercel
 
-Frontend deployment is in progress.
+The MediCare frontend is successfully deployed on Vercel.
 
-The frontend will be hosted on Vercel and communicate with the deployed Render backend through REST APIs.
+**Live Website:** https://medicare-client-nu.vercel.app
+
+**Admin Login:** https://medicare-client-nu.vercel.app/admin/login.html
+
+The frontend communicates with the deployed Render backend through REST APIs.
+
 
 **Live Website:** Coming Soon
 
@@ -290,6 +297,7 @@ MongoDB Atlas is used as the cloud database for storing:
 
 ![Contact Messages](Screenshots/contact-messages.png)
 
+
 ## Project Status
 
 - [x] Responsive frontend development
@@ -301,10 +309,13 @@ MongoDB Atlas is used as the cloud database for storing:
 - [x] Appointment management dashboard
 - [x] Contact message management
 - [x] Backend deployment on Render
+- [x] Frontend deployment on Vercel
 - [x] Frontend and backend integration testing
 - [x] GitHub repository documentation
-- [ ] Frontend deployment on Vercel
-- [ ] Final production testing
+- [x] Production testing
+
+**Project Status: Completed and Deployed**
+
 
 ## Future Improvements
 
