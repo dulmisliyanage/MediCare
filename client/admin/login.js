@@ -3,7 +3,9 @@ const loginForm = document.getElementById("adminLoginForm");
 const loginButton = document.getElementById("loginButton");
 const loginMessage = document.getElementById("loginMessage");
 
-const API_URL = "http://localhost:5000/api/auth/login";
+
+const API_URL = "https://medicare-backend-zfwh.onrender.com/api/auth/login";
+
 
 loginForm.addEventListener("submit", async (event) => {
     event.preventDefault();

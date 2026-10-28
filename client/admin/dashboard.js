@@ -1,6 +1,8 @@
 
-const API_URL = "http://localhost:5000/api/appointments";
-const CONTACT_API_URL = "http://localhost:5000/api/contact";
+
+const API_URL = "https://medicare-backend-zfwh.onrender.com/api/appointments";
+const CONTACT_API_URL = "https://medicare-backend-zfwh.onrender.com/api/contact";
+
 
 const token = sessionStorage.getItem("medicareAdminToken");
 

@@ -338,7 +338,9 @@ const appointmentMessageInput =
 const appointmentSubmitBtn =
     appointmentForm.querySelector('[type="submit"]');
 
-const API_URL = "http://localhost:5000/api/appointments";
+
+const API_URL = "https://medicare-backend-zfwh.onrender.com/api/appointments";
+
 
 let appointmentReturnFocus = null;
 
@@ -733,7 +735,9 @@ if (contactForm) {
         contactFeedback.textContent = "";
 
         try {
-            const response = await fetch("http://localhost:5000/api/contact", {
+
+            const response = await fetch("https://medicare-backend-zfwh.onrender.com/api/contact", {
+
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
