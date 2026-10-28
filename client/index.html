@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+
+
+    <!-- Website Title -->
+    <title>MediCare | Healthcare Made Simple</title>
+
+    <!-- Google Fonts - Poppins Only -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- JavaScript -->
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ========================= -->
+    <!-- HEADER / NAVIGATION       -->
+    <!-- ========================= -->
+
+
+    <header id="header">
+        <nav class="navbar container">
+
+            <!-- Logo -->
+            <a href="#home" class="logo">
+                <span class="logo-icon">+</span>
+                Medi<span>Care</span>
+            </a>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#doctors">Doctors</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact" class="nav-btn">Contact Us</a></li>
+            </ul>
+
+            <!-- Mobile Menu Button -->
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation"
+                aria-expanded="false" aria-controls="navLinks">
+                &#9776;
+            </button>
+
+        </nav>
+    </header>
+
+
+
+    <!-- ========================= -->
+    <!-- MAIN CONTENT              -->
+    <!-- ========================= -->
+
+    <main>
+
+
+        <!-- HERO SECTION -->
+        <section id="home" class="hero">
+            <div class="container hero-container">
+
+                <!-- Hero Content -->
+                <div class="hero-content">
+
+                    <span class="hero-label">
+                        Your Health, Our Priority
+                    </span>
+
+                    <h1>
+                        Quality Healthcare
+                        <span>Made Simple.</span>
+                    </h1>
+
+                    <p>
+                        Discover trusted healthcare professionals,
+                        explore medical services, and request
+                        appointments with ease. Your journey
+                        to better health starts here.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#doctors" class="btn btn-primary">
+                            Find a Doctor
+                        </a>
+
+                        <a href="#services" class="btn btn-outline">
+                            Our Services
+                        </a>
+                    </div>
+
+                    <div class="hero-trust">
+                        <span class="trust-icon">✓</span>
+                        <span>Simple, convenient healthcare access</span>
+                    </div>
+
+                </div>
+
+
+                <!-- Hero Image -->
+                <div class="hero-image">
+                    <img src="assets/images/hero-doctor.png" alt="MediCare healthcare team">
+                </div>
+
+
+            </div>
+        </section>
+
+
+
+
+
+        <!-- SERVICES SECTION -->
+        <section id="services" class="services">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-label">OUR SERVICES</span>
+
+                    <h2>Our Healthcare Services</h2>
+
+                    <p>
+                        Explore a wide range of healthcare services
+                        designed to support your health and well-being.
+                    </p>
+                </div>
+
+                <div class="services-grid">
+
+                    <!-- 1. Specialist Consultation -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i data-lucide="stethoscope"></i>
+                        </div>
+                        <h3>Specialist Consultation</h3>
+                        <p>
+                            Find experienced medical specialists
+                            for your healthcare needs.
+                        </p>
+                    </div>
+
+                    <!-- 2. Laboratory Service -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i data-lucide="microscope"></i>
+                        </div>
+                        <h3>Laboratory Service</h3>
+                        <p>
+                            Explore diagnostic testing and
+                            laboratory services.
+                        </p>
+                    </div>
+
+                    <!-- 3. Health Check-Ups -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i data-lucide="heart-pulse"></i>
+                        </div>
+                        <h3>Health Check-Ups</h3>
+                        <p>
+                            Discover routine screenings and
+                            preventive healthcare services.
+                        </p>
+                    </div>
+
+                    <!-- 4. Imaging -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i data-lucide="scan-line"></i>
+                        </div>
+                        <h3>Imaging</h3>
+                        <p>
+                            Find medical imaging and
+                            diagnostic services.
+                        </p>
+                    </div>
+
+                    <!-- 5. OPD / ETU -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i data-lucide="activity"></i>
+                        </div>
+                        <h3>OPD / ETU</h3>
+                        <p>
+                            Explore outpatient and emergency
+                            treatment services.
+                        </p>
+                    </div>
+
+                    <!-- 6. Pharmacy -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i data-lucide="pill"></i>
+                        </div>
+                        <h3>Pharmacy</h3>
+                        <p>
+                            Learn about pharmacy services
+                            and medication support.
+                        </p>
+                    </div>
+
+                    <!-- 7. Ambulance -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i data-lucide="ambulance"></i>
+                        </div>
+                        <h3>Ambulance</h3>
+                        <p>
+                            Find information about emergency
+                            medical transportation.
+                        </p>
+                    </div>
+
+                    <!-- 8. Operation Theatre -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i data-lucide="hospital"></i>
+                        </div>
+                        <h3>Operation Theatre</h3>
+                        <p>
+                            Explore surgical facilities
+                            and specialist care services.
+                        </p>
+                    </div>
+
+                    <!-- 9. Inpatient Care -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i data-lucide="bed-double"></i>
+                        </div>
+                        <h3>Inpatient Care</h3>
+                        <p>
+                            Discover hospital accommodation
+                            and inpatient care services.
+                        </p>
+                    </div>
+
+                    <!-- 10. Other Services -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i data-lucide="list-plus"></i>
+                        </div>
+                        <h3>Other Services</h3>
+                        <p>
+                            Explore additional healthcare
+                            services and medical support.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <!-- DOCTORS SECTION -->
+        <section id="doctors" class="doctors">
+            <div class="container">
+
+                <!-- Section Heading -->
+                <div class="section-heading">
+                    <span class="section-label">OUR DOCTORS</span>
+
+                    <h2>Find the Right Doctor for You</h2>
+
+                    <p>
+                        Explore healthcare professionals,
+                        search by specialty or location,
+                        and request an appointment easily.
+                    </p>
+                </div>
+
+                <!-- Doctor Search and Filters -->
+                <div class="doctor-filters">
+
+                    <div class="filter-group">
+                        <label for="doctorSearch">
+                            Doctor Name
+                        </label>
+
+                        <input type="text" id="doctorSearch" placeholder="Search doctor name">
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="specialtyFilter">
+                            Specialty
+                        </label>
+
+                        <select id="specialtyFilter">
+                            <option value="">All Specialties</option>
+                            <option value="Cardiology">Cardiology</option>
+                            <option value="Neurology">Neurology</option>
+                            <option value="Pediatrics">Pediatrics</option>
+                            <option value="Orthopedics">Orthopedics</option>
+                            <option value="General Medicine">
+                                General Medicine
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="locationFilter">
+                            Location
+                        </label>
+
+                        <select id="locationFilter">
+                            <option value="">All Locations</option>
+                            <option value="Colombo">Colombo</option>
+                            <option value="Kandy">Kandy</option>
+                            <option value="Galle">Galle</option>
+                            <option value="Negombo">Negombo</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <!-- Doctor Cards -->
+                <div class="doctors-grid" id="doctorsGrid">
+                    <!-- Doctor cards will be added using JavaScript -->
+                </div>
+
+                <!-- Empty State -->
+                <div class="doctors-empty" id="doctorsEmpty" hidden>
+                    <h3>No doctors found</h3>
+                    <p>Try changing your search or filters.</p>
+                </div>
+
+            </div>
+        </section>
+
+
+
+
+        <!-- ========================= -->
+        <!-- ABOUT US SECTION          -->
+        <!-- ========================= -->
+
+        <section id="about" class="about">
+            <div class="container about-container">
+
+                <!-- About Image -->
+                <div class="about-image">
+                    <img src="assets/images/about-healthcare.jpg"
+                        alt="Healthcare professional consulting with a patient" loading="lazy">
+
+                    <div class="about-image-badge">
+                        <i data-lucide="heart-pulse"></i>
+                        <span>Care That Matters</span>
+                    </div>
+                </div>
+
+                <!-- About Content -->
+                <div class="about-content">
+
+                    <span class="section-label">ABOUT MEDICARE</span>
+
+                    <h2>
+                        Making Healthcare
+                        <span>Simple & Accessible.</span>
+                    </h2>
+
+                    <p class="about-description">
+                        At MediCare, we believe finding the right healthcare
+                        professional should be simple and convenient.
+                        Our platform helps you explore medical services,
+                        discover doctors, and request appointments
+                        from one easy-to-use website.
+                    </p>
+
+                    <p class="about-description">
+                        We're focused on creating a smoother healthcare
+                        experience by connecting patients with the
+                        information and services they need.
+                    </p>
+
+                    <div class="about-features">
+
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <i data-lucide="heart-handshake"></i>
+                            </div>
+
+                            <div>
+                                <h3>Patient-Centered</h3>
+                                <p>Designed around your convenience.</p>
+                            </div>
+                        </div>
+
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <i data-lucide="stethoscope"></i>
+                            </div>
+
+                            <div>
+                                <h3>Easy Doctor Discovery</h3>
+                                <p>Explore doctors and specialties easily.</p>
+                            </div>
+                        </div>
+
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <i data-lucide="calendar-check"></i>
+                            </div>
+
+                            <div>
+                                <h3>Simple Appointments</h3>
+                                <p>Request appointments in just a few steps.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <a href="#doctors" class="btn btn-primary about-btn">
+                        Explore Our Doctors
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- ========================= -->
+        <!-- CONTACT SECTION           -->
+        <!-- ========================= -->
+
+        <section id="contact" class="contact">
+            <div class="container">
+
+                <!-- Section Heading -->
+                <div class="section-heading">
+                    <span class="section-label">CONTACT US</span>
+                    <h2>Get in Touch With Us</h2>
+                    <p>
+                        Have a question about MediCare? We're here to help
+                        you find the information you need.
+                    </p>
+                </div>
+
+                <div class="contact-container">
+
+                    <!-- Contact Information -->
+                    <div class="contact-info">
+
+                        <h3>Let's Connect</h3>
+
+                        <p class="contact-intro">
+                            Have questions or need assistance?
+                            Reach out to our team using the
+                            contact details below.
+                        </p>
+
+                        <!-- Location -->
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+
+                            <div>
+                                <h4>Our Location</h4>
+                                <p>Homagama, Colombo, Sri Lanka</p>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <i data-lucide="mail"></i>
+                            </div>
+
+                            <div>
+                                <h4>Email Address</h4>
+                                <p>
+                                    <a href="mailto:medicare@gmail.com">
+                                        medicare@gmail.com
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Support Hours -->
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <i data-lucide="clock-3"></i>
+                            </div>
+
+                            <div>
+                                <h4>Support Hours</h4>
+                                <p>Monday - Saturday</p>
+                                <p>8:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+
+                        <!-- Emergency Notice -->
+                        <div class="contact-note">
+                            <i data-lucide="info"></i>
+                            <p>
+                                For medical emergencies, contact your
+                                local emergency services directly.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-wrapper">
+
+                        <h3>Send Us a Message</h3>
+
+                        <p>
+                            Complete the form below to prepare
+                            your message.
+                        </p>
+
+                        <form id="contactForm">
+
+                            <!-- Name and Email -->
+                            <div class="contact-form-row">
+
+                                <div class="contact-form-group">
+                                    <label for="contactName">
+                                        Full Name
+                                    </label>
+
+                                    <input type="text" id="contactName" name="name" placeholder="Your full name"
+                                        autocomplete="name" maxlength="100" required>
+                                </div>
+
+                                <div class="contact-form-group">
+                                    <label for="contactEmail">
+                                        Email Address
+                                    </label>
+
+                                    <input type="email" id="contactEmail" name="email" placeholder="Your email address"
+                                        autocomplete="email" required>
+                                </div>
+
+                            </div>
+
+                            <!-- Subject -->
+                            <div class="contact-form-group">
+                                <label for="contactSubject">
+                                    Subject
+                                </label>
+
+                                <input type="text" id="contactSubject" name="subject" placeholder="How can we help?"
+                                    maxlength="150" required>
+                            </div>
+
+                            <!-- Message -->
+                            <div class="contact-form-group">
+                                <label for="contactMessage">
+                                    Message
+                                </label>
+
+                                <textarea id="contactMessage" name="message" rows="5"
+                                    placeholder="Write your message here..." maxlength="2000" required></textarea>
+                            </div>
+
+
+                            <p id="contactFeedback" class="appointment-feedback" role="status" aria-live="polite"
+                                hidden></p>
+
+
+                            <!-- Submit Button -->
+
+                            <button type="submit" class="btn btn-primary contact-submit-btn" id="contactSubmitBtn">
+                                Send Message
+                                <i data-lucide="send"></i>
+                            </button>
+
+
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- ========================= -->
+    <!-- FOOTER                    -->
+    <!-- ========================= -->
+
+    <footer id="footer" class="footer">
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <!-- Brand -->
+                <div class="footer-brand">
+
+                    <a href="#home" class="footer-logo">
+                        <span class="footer-logo-icon">+</span>
+                        Medi<span>Care</span>
+                    </a>
+
+                    <p>
+                        Making healthcare simple and accessible.
+                        Explore healthcare services, find doctors,
+                        and request appointments with ease.
+                    </p>
+
+                    <div class="footer-socials">
+                        <a href="#contact" aria-label="Contact MediCare">
+                            <i data-lucide="mail"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-column">
+
+                    <h3>Quick Links</h3>
+
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#doctors">Find a Doctor</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+
+                </div>
+
+                <!-- Services -->
+                <div class="footer-column">
+
+                    <h3>Our Services</h3>
+
+                    <ul>
+                        <li>
+                            <a href="#services">
+                                Specialist Consultation
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#services">
+                                Health Check-Ups
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#services">
+                                Laboratory Services
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#services">
+                                Medical Imaging
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#services">
+                                Pharmacy Services
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <!-- Contact Details -->
+                <div class="footer-column">
+
+                    <h3>Get in Touch</h3>
+
+                    <div class="footer-contact-item">
+                        <i data-lucide="map-pin"></i>
+                        <span>Homagama, Colombo, Sri Lanka</span>
+                    </div>
+
+                    <div class="footer-contact-item">
+                        <i data-lucide="mail"></i>
+                        <a href="mailto:medicare@gmail.com">
+                            medicare@gmail.com
+                        </a>
+                    </div>
+
+                    <div class="footer-contact-item">
+                        <i data-lucide="clock-3"></i>
+                        <span>Mon - Sat: 8:00 AM - 6:00 PM</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+
+                <p>
+                    &copy; 2026 MediCare. All rights reserved.
+                </p>
+
+                <p>
+                    Designed &amp; Developed with care.
+                </p>
+
+            </div>
+
+        </div>
+    </footer>
+
+
+
+
+
+
+    <!-- ======================================
+     DOCTOR PROFILE MODAL
+====================================== -->
+
+    <div class="modal-overlay" id="doctorModal" role="dialog" aria-modal="true" aria-labelledby="modalDoctorName"
+        hidden>
+        <div class="modal-content">
+
+            <!-- Close Button -->
+            <button class="modal-close" id="closeDoctorModal" type="button" aria-label="Close doctor profile">
+                <i data-lucide="x"></i>
+            </button>
+
+            <!-- Doctor Information -->
+            <div class="modal-doctor-info">
+
+                <img id="modalDoctorImage" src="" alt="Doctor portrait">
+
+                <div class="modal-doctor-details">
+
+                    <h2 id="modalDoctorName"></h2>
+
+                    <p class="modal-specialty" id="modalDoctorSpecialty"></p>
+
+                    <p id="modalDoctorLocation"></p>
+
+                    <p id="modalDoctorExperience"></p>
+
+                </div>
+            </div>
+
+            <!-- About Doctor -->
+            <div class="modal-about">
+                <h3>About Doctor</h3>
+
+                <p>
+                    An experienced healthcare professional
+                    dedicated to providing quality patient care.
+                </p>
+            </div>
+
+            <!-- Appointment Button -->
+            <button class="modal-appointment-btn" id="requestAppointmentBtn" type="button">
+                Request Appointment
+            </button>
+
+        </div>
+    </div>
+
+
+    <!-- ======================================
+     APPOINTMENT REQUEST MODAL
+====================================== -->
+
+    <div class="modal-overlay" id="appointmentModal" role="dialog" aria-modal="true"
+        aria-labelledby="appointmentModalTitle" hidden>
+        <div class="modal-content appointment-modal">
+
+            <!-- Close Button -->
+            <button class="modal-close" id="closeAppointmentModal" type="button" aria-label="Close appointment form">
+                <i data-lucide="x"></i>
+            </button>
+
+            <!-- Form Heading -->
+            <div class="appointment-heading">
+                <span class="section-label">
+                    APPOINTMENT REQUEST
+                </span>
+
+                <h2 id="appointmentModalTitle">
+                    Book an Appointment
+                </h2>
+
+                <p>
+                    Fill in your details and we'll help you
+                    request an appointment with your doctor.
+                </p>
+            </div>
+
+            <!-- Appointment Form -->
+            <form id="appointmentForm">
+
+                <!-- Selected Doctor -->
+                <div class="appointment-form-group">
+                    <label for="appointmentDoctor">
+                        Selected Doctor
+                    </label>
+
+                    <input type="text" id="appointmentDoctor" name="doctorName" readonly required>
+                </div>
+
+                <!-- Patient Name -->
+                <div class="appointment-form-group">
+                    <label for="patientName">
+                        Full Name *
+                    </label>
+
+                    <input type="text" id="patientName" name="patientName" placeholder="Enter your full name"
+                        autocomplete="name" maxlength="100" required>
+                </div>
+
+                <!-- Email -->
+                <div class="appointment-form-group">
+                    <label for="patientEmail">
+                        Email Address *
+                    </label>
+
+                    <input type="email" id="patientEmail" name="email" placeholder="Enter your email address"
+                        autocomplete="email" required>
+                </div>
+
+                <!-- Phone -->
+                <div class="appointment-form-group">
+                    <label for="patientPhone">
+                        Phone Number *
+                    </label>
+
+                    <input type="tel" id="patientPhone" name="phone" placeholder="Enter your phone number"
+                        autocomplete="tel" maxlength="20" required>
+                </div>
+
+                <!-- Preferred Date -->
+                <div class="appointment-form-group">
+                    <label for="appointmentDate">
+                        Preferred Date *
+                    </label>
+
+                    <input type="date" id="appointmentDate" name="preferredDate" required>
+                </div>
+
+                <!-- Additional Message -->
+                <div class="appointment-form-group">
+                    <label for="appointmentMessage">
+                        Additional Message (Optional)
+                    </label>
+
+                    <textarea id="appointmentMessage" name="message" rows="3" maxlength="500"
+                        placeholder="Any additional information..."></textarea>
+                </div>
+
+                <!-- Feedback Message -->
+                <p class="appointment-feedback" id="appointmentFeedback" role="status" aria-live="polite" hidden></p>
+
+                <!-- Submit Button -->
+                <button type="submit" class="modal-appointment-btn" id="submitAppointmentBtn">
+                    Submit Request
+                </button>
+
+            </form>
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

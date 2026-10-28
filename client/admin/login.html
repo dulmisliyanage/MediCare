@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Login | MediCare</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./admin.css">
+    <script src="./login.js" defer></script>
+</head>
+
+<body>
+    <main class="login-page">
+        <section class="login-card">
+
+            <div class="brand">
+                <div class="brand-icon">+</div>
+                <span>MediCare</span>
+            </div>
+
+            <div class="login-heading">
+                <h1>Admin Login</h1>
+                <p>
+                    Sign in to manage patient
+                    appointments.
+                </p>
+            </div>
+
+            <form id="adminLoginForm">
+
+                <div class="form-group">
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input type="email" id="email" name="email" placeholder="Enter your email" autocomplete="username"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input type="password" id="password" name="password" placeholder="Enter your password"
+                        autocomplete="current-password" required>
+                </div>
+
+                <p id="loginMessage" class="login-message" role="status" aria-live="polite"></p>
+
+                <button type="submit" id="loginButton" class="login-button">
+                    Sign In
+                </button>
+
+            </form>
+
+            <a href="../index.html" class="back-link">
+                ← Back to MediCare
+            </a>
+
+        </section>
+    </main>
+</body>
+
+</html>

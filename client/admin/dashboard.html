@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | MediCare</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./admin.css">
+    <script src="./dashboard.js" defer></script>
+</head>
+
+<body class="dashboard-body">
+
+    <div class="dashboard-layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <a href="../index.html" class="sidebar-brand">
+                <span class="sidebar-brand-icon">+</span>
+                <span>MediCare</span>
+            </a>
+
+            <div class="sidebar-label">ADMIN PANEL</div>
+
+            <nav class="sidebar-nav">
+                <a href="./dashboard.html" class="sidebar-link active">
+                    Dashboard
+                </a>
+
+                <a href="#appointments" class="sidebar-link">
+                    Appointments
+                </a>
+            </nav>
+
+            <button id="logoutButton" class="logout-button" type="button">
+                Log Out
+            </button>
+
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+
+            <header class="dashboard-header">
+                <div>
+                    <p class="dashboard-eyebrow">
+                        ADMIN OVERVIEW
+                    </p>
+                    <h1>Dashboard</h1>
+                    <p class="dashboard-subtitle">
+                        Manage patient appointments in one place.
+                    </p>
+                </div>
+
+                <span class="admin-indicator">
+                    Administrator
+                </span>
+            </header>
+
+            <!-- Statistics -->
+            <section class="stats-grid" aria-label="Appointment statistics">
+
+                <article class="stat-card">
+                    <span class="stat-label">
+                        Total Appointments
+                    </span>
+                    <strong id="totalCount">—</strong>
+                    <span class="stat-description">
+                        All appointment requests
+                    </span>
+                </article>
+
+                <article class="stat-card">
+                    <span class="stat-label">
+                        Pending
+                    </span>
+                    <strong id="pendingCount">—</strong>
+                    <span class="stat-description">
+                        Awaiting confirmation
+                    </span>
+                </article>
+
+                <article class="stat-card">
+                    <span class="stat-label">
+                        Confirmed
+                    </span>
+                    <strong id="confirmedCount">—</strong>
+                    <span class="stat-description">
+                        Approved appointments
+                    </span>
+                </article>
+
+                <article class="stat-card">
+                    <span class="stat-label">
+                        Cancelled
+                    </span>
+                    <strong id="cancelledCount">—</strong>
+                    <span class="stat-description">
+                        Cancelled appointments
+                    </span>
+                </article>
+
+            </section>
+
+            <!-- Appointments -->
+            <section id="appointments" class="appointments-panel">
+
+                <div class="panel-heading">
+                    <div>
+                        <h2>Appointments</h2>
+                        <p>
+                            Review and manage patient requests.
+                        </p>
+                    </div>
+
+                    <button id="refreshButton" class="refresh-button" type="button">
+                        Refresh
+                    </button>
+                </div>
+
+
+                <!-- Search and Filter -->
+                <div class="appointment-filters">
+
+                    <div class="search-box">
+                        <label for="appointmentSearch">
+                            Search Appointments
+                        </label>
+
+                        <input type="search" id="appointmentSearch" placeholder="Search patient or doctor..."
+                            autocomplete="off">
+                    </div>
+
+                    <div class="filter-box">
+                        <label for="statusFilter">
+                            Filter by Status
+                        </label>
+
+                        <select id="statusFilter">
+                            <option value="all">All Statuses</option>
+                            <option value="pending">Pending</option>
+                            <option value="confirmed">Confirmed</option>
+                            <option value="cancelled">Cancelled</option>
+                        </select>
+                    </div>
+
+                </div>
+
+
+                <p id="dashboardMessage" class="dashboard-message" role="status" aria-live="polite">
+                    Appointment data will appear here.
+                </p>
+
+                <div class="table-wrapper">
+                    <table class="appointments-table">
+                        <thead>
+                            <tr>
+                                <th>Patient</th>
+                                <th>Doctor</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="appointmentsTableBody">
+                            <tr>
+                                <td colspan="5" class="empty-table">
+                                    No appointments loaded yet.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </section>
+
+            <!-- =====================================
+     CONTACT MESSAGES SECTION
+===================================== -->
+            <section class="messages-section" id="messagesSection">
+
+                <div class="section-header">
+                    <div>
+                        <h2>Contact Messages</h2>
+                        <p>View messages received from website visitors.</p>
+                    </div>
+
+                    <button type="button" id="refreshMessagesBtn">
+                        Refresh Messages
+                    </button>
+                </div>
+
+                <div id="messagesFeedback" role="status" aria-live="polite"></div>
+
+                <div class="messages-table-wrapper">
+                    <table class="messages-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Subject</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="messagesTableBody">
+                            <tr>
+                                <td colspan="6">Loading messages...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </section>
+
+
+        </main>
+    </div>
+
+
+    <!-- Appointment Details Modal -->
+    <div id="appointmentModal" class="details-modal" aria-hidden="true">
+
+        <div class="details-modal-card" role="dialog" aria-modal="true" aria-labelledby="detailsModalTitle"
+            tabindex="-1">
+
+            <div class="details-modal-header">
+                <div>
+                    <p class="dashboard-eyebrow">
+                        APPOINTMENT INFORMATION
+                    </p>
+                    <h2 id="detailsModalTitle">
+                        Appointment Details
+                    </h2>
+                </div>
+
+                <button id="closeDetailsModal" class="details-close-btn" type="button"
+                    aria-label="Close appointment details">
+                    &times;
+                </button>
+            </div>
+
+            <div class="details-grid">
+                <div class="detail-field">
+                    <span>Patient Name</span>
+                    <strong id="detailPatientName">—</strong>
+                </div>
+
+                <div class="detail-field">
+                    <span>Doctor</span>
+                    <strong id="detailDoctorName">—</strong>
+                </div>
+
+                <div class="detail-field">
+                    <span>Email Address</span>
+                    <strong id="detailPatientEmail">—</strong>
+                </div>
+
+                <div class="detail-field">
+                    <span>Phone Number</span>
+                    <strong id="detailPatientPhone">—</strong>
+                </div>
+
+                <div class="detail-field">
+                    <span>Appointment Date</span>
+                    <strong id="detailAppointmentDate">—</strong>
+                </div>
+
+                <div class="detail-field">
+                    <span>Status</span>
+                    <strong id="detailAppointmentStatus">—</strong>
+                </div>
+            </div>
+
+            <div class="detail-message">
+                <span>Patient Message</span>
+                <p id="detailPatientMessage">—</p>
+            </div>
+
+            <div class="details-modal-footer">
+                <button id="doneDetailsButton" class="refresh-button" type="button">
+                    Close
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- =====================================
+     CONTACT MESSAGE DETAILS MODAL
+===================================== -->
+
+    <div class="message-modal-overlay" id="contactMessageModal" role="dialog" aria-modal="true"
+        aria-labelledby="contactModalTitle" aria-hidden="true">
+        <div class="message-modal-card">
+
+            <div class="message-modal-header">
+                <div>
+                    <h2 id="contactModalTitle">Contact Message</h2>
+                    <p>Message received from a website visitor</p>
+                </div>
+
+                <button type="button" id="closeContactModal" class="message-modal-close"
+                    aria-label="Close message details">
+                    &times;
+                </button>
+            </div>
+
+            <div class="message-modal-body">
+
+                <div class="message-detail-group">
+                    <span class="message-detail-label">Full Name</span>
+                    <p id="contactDetailName">—</p>
+                </div>
+
+                <div class="message-detail-group">
+                    <span class="message-detail-label">Email Address</span>
+                    <p id="contactDetailEmail">—</p>
+                </div>
+
+                <div class="message-detail-group">
+                    <span class="message-detail-label">Subject</span>
+                    <p id="contactDetailSubject">—</p>
+                </div>
+
+                <div class="message-detail-group">
+                    <span class="message-detail-label">Received Date</span>
+                    <p id="contactDetailDate">—</p>
+                </div>
+
+                <div class="message-detail-group">
+                    <span class="message-detail-label">Message</span>
+                    <div class="message-detail-content" id="contactDetailMessage">
+                        —
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="message-modal-footer">
+                <button type="button" id="doneContactModal" class="action-btn view-btn">
+                    Close
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
