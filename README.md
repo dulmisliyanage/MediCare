@@ -162,11 +162,9 @@ Make sure you have installed:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/MediCare.git
+git clone https://github.com/dulmisliyanage/MediCare.git
 cd MediCare
 ```
-
-Replace `YOUR-USERNAME` with your actual GitHub username.
 
 ### 2. Install Backend Dependencies
 
